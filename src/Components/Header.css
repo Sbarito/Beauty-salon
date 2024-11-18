@@ -1,50 +1,23 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    vertical-align: top;
-    padding: 10px 20px;
-    background-color: #3991ef;
-    color: white;
-    font-size: 15px;
-  }
-  
-  .header-left {
-    display: flex;
-    text-align: left;
-    margin: 0px 0px;
-  }
-
-  .header-title {
-    white-space: nowrap;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffc9a8;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  position: fixed; /* Закрепляем навигационную панель */
+  top: 0; /* Прижимаем к верхней части экрана */
+  left: 0; /* Прижимаем к левой части экрана */
+  width: 100%; /* Растягиваем на всю ширину экрана */
+  z-index: 1000; /* Устанавливаем z-index, чтобы навигационная панель была поверх других элементов */
 }
 
-  .header-left a {
-    text-decoration: none;
-    color: #fff; 
-    font-size: 15px;
-  }
-  
-  .header-left a:hover {
-    text-decoration: underline;
-  }
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
 
-  .header-right {
-    margin-left: auto;
-  }
-
-  .back-button {
-    width: 100%;
-    padding: 0px 15px 0px 0px;
-    background-color: #3991ef;
-    color: white;
-    border: none;
-    border-radius: 0px;
-    cursor: pointer;
-    font-size: 15px;
-    text-align: left;
-  }
-  
-  .back-button:hover {
-    background-color: #3991ef;
-    text-decoration: underline;
-  }
+.navbar-logo img {
+  vertical-align: middle;
+}

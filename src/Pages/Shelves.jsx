@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link  } from 'react-router-dom';
 import './List.css';
-import './Setting.css'
+import './Catalog.css'
 import Header from '../Components/Header'; 
 
 export default function Shelves() {

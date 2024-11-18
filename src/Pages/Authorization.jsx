@@ -1,6 +1,6 @@
 import React from 'react';
 import './Authorization.css';
-import BackgroundImage from '../Images/plase of poineers.svg';
+import BackgroundImage from '../Images/abc.png';
 
 function Authorization({ setUser  }) {
 
@@ -24,7 +24,6 @@ function Authorization({ setUser  }) {
             </div>
             <button class="login-button">Войти</button>
           </form>
-          <a href="/" className="back-link">Назад</a>
         </div>
       </div>
     </div>

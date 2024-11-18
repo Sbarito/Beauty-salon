@@ -1,0 +1,24 @@
+.cotainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 1px solid #333; /* Темная обводка */
+    color: black; /* Цвет текста */
+    font-size: 20px; /* Размер текста */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash {
+    font-size: 24px;
+    margin: 0 10px;
+}

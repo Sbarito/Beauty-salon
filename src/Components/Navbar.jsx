@@ -1,51 +1,20 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import './Navbar.css';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-export default function Navbar() {
+const Navbar = () => {
 
-  const[userRights, setUserRights] = useState('admin');
-
-  return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <h2>Музей истории <br /> детского движения</h2>
-        <p>Вспоминая прошлое, создаем будущее</p>
-      </div>
-  
-      <div className="navbar-left">
-        <ul className="navbar-links">
-          <li>
-            <Link to="/">Выставки</Link>
-          </li>
-          <li> { userRights != 'user' && (
-            <Link to="/warehouse/room">Фонды</Link>
-          )}
-          </li>
-        </ul>
-      </div>
-
-      <div className="navbar-right">
-        <ul className="navbar-links">
-        <li> { userRights == 'admin' && (
-            <Link to="/setting">Настройка</Link>
-          )}
-          </li>
-        {userRights === 'user' ? (
-            <li>
-              <Link to="/authorization">Войти</Link>
-            </li>
-          ) : (
-            <li>
-              <Link to="/">
-                <button class="logout-button" onClick={() => setUserRights('user')}>Выйти</button>
-              </Link>
-            </li>
-          )}
-        </ul>
-      </div>
+    return (
+        <nav className="header">
+        <div className="tabs">
+            <a href="/" className="tab">Справка</a>
+            <a href="/catalog" className="tab">Каталог</a>
+            <a href="/reception" className="tab">Запись</a>
+            <a href="/authorization" className="tab">Войти</a>
+        </div>
     </nav>
-  );
-}
+    );
+};
 
+export default Navbar;
 

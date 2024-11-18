@@ -11,7 +11,7 @@
   
   .left-side {
     flex: 1;
-    background-color: #f0f0f0;
+    background-color: #ffc9a8;
   }
   
   .left-side img {
@@ -61,7 +61,7 @@
   .login-button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #393939;
     color: white;
     border: none;
     border-radius: 5px;
@@ -70,7 +70,7 @@
   }
   
   .login-button:hover {
-    background-color: #0056b3;
+    background-color: #686868;
   }
 
   .back-link {

@@ -1,64 +1,31 @@
-.navbar {
+.header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  vertical-align: top;
   padding: 10px 20px;
-  background-color: #007bff;
   color: white;
+  background-color: #f7a776;
+  padding: 10px 0;
   font-size: 15px;
+  position: fixed; /* Закрепляем хедер */
+  top: 50px; /* Располагаем хедер ниже навбара */
+  left: 0; /* Прижимаем к левой части экрана */
+  width: 100%; /* Растягиваем на всю ширину экрана */
+  z-index: 999; /* Устанавливаем z-index, чтобы хедер был поверх других элементов, но под навбаром */
 }
 
-.navbar-left {
-  align-items: center;
-  margin-left: 3%;
-  margin-right: 3%;
-}
-
-.navbar-logo h2 {
-  margin: 0;
-}
-
-.navbar-links {
-  list-style: none;
+.tabs {
   display: flex;
-  gap: 9%;
-  font-size: 15px;
+  margin: 10px 0 0 0;
+  justify-content: space-between;
+  align-items: center; /* Добавлено для центрирования по вертикали */
+  width: 400px;
+  height: 70px;
 }
 
-.navbar-links li {
-  display: inline;
-}
-
-.navbar-links a {
+.tab {
   text-decoration: none;
-  color: #fff; 
-  font-size: 15px;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
-
-.navbar-links a:hover {
-  text-decoration: underline;
-}
-
-.navbar-right {
-  margin-left: auto;
-  margin-right: 10px;
-}
-
-
-.logout-button {
-  width: 100%;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 0px;
-  cursor: pointer;
-  font-size: 15px;
-  text-align: left;
-}
-
-.logout-button:hover {
-  background-color: #007bff;
-  text-decoration: underline;
-}
-
-

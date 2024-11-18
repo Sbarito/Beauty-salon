@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './List.css';
-import './Setting.css';
+import './Catalog.css';
 import './ExhibitInfo.css';
 import Header from '../Components/Header'; 
 import ExhibitImage from '../Images/Tasy.jpeg';
