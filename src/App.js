@@ -6,6 +6,7 @@ import Catalog from "./Pages/Catalog";
 import Home from "./Pages/Home";
 import Reception from "./Pages/Reception";
 import Header from './Components/Header';
+import History from './Pages/History';
 
 function App() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/authorization" element={<Authorization />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/history" element={<History/>}/>
           <Route path="/" element={<Home />} />
           <Route path="/reception" element={<Reception />} />
         </Routes>

@@ -1,24 +1,67 @@
-.cotainer {
+.booking-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-form h2 {
+    margin-bottom: 15px;
+  }
+  
+  .booking-form select,
+  .booking-form input[type="date"],
+  .booking-form input[type="text"],
+  .booking-form input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .booking-form button {
+    padding: 10px 15px;
+    background-color: #393939;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  
+  .booking-form button:hover {
+    background-color: #686868;
+  }
+  
+  .booking-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .available-times {
+    margin-top: 15px;
+  }
+  
+  .time-slot {
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .time-slot input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .booking-success {
     margin-top: 20px;
-}
-
-.circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0 10px;
-    border: 1px solid #333; /* Темная обводка */
-    color: black; /* Цвет текста */
-    font-size: 20px; /* Размер текста */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dash {
-    font-size: 24px;
-    margin: 0 10px;
-}
+    padding: 10px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    text-align: center;
+  }
