@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import './Authorization.css';
 import BackgroundImage from '../Images/abc.png';
+import { Context } from '..';
+import { useNavigate } from 'react-router-dom';
 
-function Authorization({ setUser  }) {
+function Authorization({ setUser }) {
+  const { store } = useContext(Context);
+  const [isLogin, setIsLogin] = useState(true);
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
+  const [fio, setFio] = useState('');
+  const navigate = useNavigate();
+
+  const handleToggleForm = () => {
+    setIsLogin(!isLogin);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (isLogin) {
+      await store.login(phone, password, navigate);
+    } else {
+      await store.register(phone, password, fio, navigate);
+    }
+  }
 
 
   return (
@@ -12,18 +33,46 @@ function Authorization({ setUser  }) {
       </div>
       <div className="right-side">
         <div className="login-form">
-          <h2>Вход</h2>
-          <form onSubmit>
+          <h2>{isLogin ? 'Вход' : 'Регистрация'}</h2>
+          <form onSubmit={handleSubmit}>
+            {!isLogin && (
+              <div className="form-group">
+                <label htmlFor="fullName">ФИО</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  value={fio}
+                  onChange={(e) => setFio(e.target.value)}
+                />
+              </div>
+            )}
             <div className="form-group">
               <label htmlFor="username">Логин</label>
-              <input/>
+              <input
+                type="text"
+                id="username"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
             </div>
             <div className="form-group">
               <label htmlFor="password">Пароль</label>
-              <input/>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
-            <button class="login-button">Войти</button>
+            <button className="login-button">
+              {isLogin ? 'Войти' : 'Зарегистрироваться'}
+            </button>
           </form>
+          <div className="toggle-form">
+            <button onClick={handleToggleForm}>
+              {isLogin ? 'Зарегистрироваться' : 'Назад'}
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -31,5 +80,3 @@ function Authorization({ setUser  }) {
 }
 
 export default Authorization;
-
-

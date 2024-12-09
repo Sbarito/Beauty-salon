@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import Reception from "./Pages/Reception";
 import Header from './Components/Header';
 import History from './Pages/History';
+import Master from './Pages/Master';
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
           <Route path="/history" element={<History/>}/>
           <Route path="/" element={<Home />} />
           <Route path="/reception" element={<Reception />} />
+          <Route path="/master" element={<Master />} />
         </Routes>
       </div>
     </div>
