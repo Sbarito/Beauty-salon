@@ -12,4 +12,8 @@ export default class Masters {
     static assignService(mastersId, serviceId) {
         return $api.post('/master/assign-service', { mastersId, serviceId });
     }
+    
+    static getMastersByServiceId(serviceId) {
+        return $api.get(`/master/get/${serviceId}`);
+    }
 }

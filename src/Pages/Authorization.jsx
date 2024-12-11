@@ -4,7 +4,7 @@ import BackgroundImage from '../Images/abc.png';
 import { Context } from '..';
 import { useNavigate } from 'react-router-dom';
 
-function Authorization({ setUser }) {
+function Authorization() {
   const { store } = useContext(Context);
   const [isLogin, setIsLogin] = useState(true);
   const [phone, setPhone] = useState('');

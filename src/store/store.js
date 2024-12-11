@@ -17,10 +17,13 @@ export default class Store {
     async login(phone, password, navigate) {
         try {
             localStorage.removeItem('token');
+            localStorage.removeItem('role');
             const response = await Auth.login(phone, password);
+            localStorage.setItem('token', response.data.data.token);
+            localStorage.setItem('role', response.data.data.role);
+            console.log(response)
             this.setAuth(true, response.data.data.role);
             navigate('/');
-            localStorage.setItem('token', response.data.data.token);
         } catch (e) {
             alert(e.response?.data?.message || 'Произошла ошибка при входе');
         }
@@ -29,12 +32,15 @@ export default class Store {
     async register(phone, password, fio, navigate) {
         try {
             localStorage.removeItem('token');
+            localStorage.removeItem('role');
             const response = await Auth.register(phone, password, fio);
+            localStorage.setItem('token', response.data.data.token);
+            localStorage.setItem('role', response.data.data.role);
             this.setAuth(true, response.data.data.role);
             navigate('/');
-            localStorage.setItem('token', response.data.data.token);
         } catch (e) {
             alert(e.response?.data?.message || 'Произошла ошибка при регистрации');
         }
     }
+
 }

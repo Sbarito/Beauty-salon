@@ -6,17 +6,7 @@ import Header from '../Components/Navbar';
 
 export default function Home() {
 
-  
-  
-const services = [
-  "Маникюр",
-  "Педикюр",
-  "Макияж",
-  "Стрижка",
-  "Окрашивание",
-  "Уход за кожей",
-  "Массаж"
-];
+
 
   return (
     <div>

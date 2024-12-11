@@ -7,18 +7,18 @@
   background-color: #f7a776;
   padding: 10px 0;
   font-size: 15px;
-  position: fixed; /* Закрепляем хедер */
-  top: 50px; /* Располагаем хедер ниже навбара */
-  left: 0; /* Прижимаем к левой части экрана */
-  width: 100%; /* Растягиваем на всю ширину экрана */
-  z-index: 999; /* Устанавливаем z-index, чтобы хедер был поверх других элементов, но под навбаром */
+  position: fixed;
+  top: 50px; 
+  left: 0; 
+  width: 100%; 
+  z-index: 999; 
 }
 
 .tabs {
   display: flex;
   margin: 10px 0 0 0;
   justify-content: space-between;
-  align-items: center; /* Добавлено для центрирования по вертикали */
+  align-items: center; 
   width: 400px;
   height: 70px;
 }

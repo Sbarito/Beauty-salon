@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from "./Components/Navbar";
 import Authorization from "./Pages/Authorization";
@@ -10,6 +10,7 @@ import History from './Pages/History';
 import Master from './Pages/Master';
 
 function App() {
+
   const location = useLocation();
   const isAuthorizationPage = location.pathname === '/authorization';
 

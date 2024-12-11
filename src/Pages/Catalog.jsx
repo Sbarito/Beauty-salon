@@ -8,6 +8,7 @@ import Serv from '../services/Serv';
 import { Context } from '..';
 
 export default function Catalog() {
+    const role = localStorage.getItem('role')
     const { store } = useContext(Context);
     const [services, setServices] = useState([]);
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -100,11 +101,14 @@ export default function Catalog() {
 
     return (
         <div>
-            {store.isRole === 'ADMIN' && (
-                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '5px', marginTop: '20px', marginLeft: '25px', marginRight: '25px' }}>
-                    <button className="adding-button" onClick={handleCreateService}>Создать услугу</button>
-                </div>
-            )}
+            {role == 'ADMIN'? 
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '5px', marginTop: '20px', marginLeft: '25px', marginRight: '25px' }}>
+                <button className="adding-button" onClick={handleCreateService}>Создать услугу</button>
+            </div>
+            :
+                <></>
+            }
+            
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
                 {services.length === 0 ? (
                     <div style={{ textAlign: 'center', width: '100%', marginTop: '20px' }}>
@@ -158,7 +162,7 @@ export default function Catalog() {
                                     {service.price}
                                 </div>
                             )}
-                            {store.isRole === 'ADMIN' && (
+                            {localStorage.getItem('role') === 'ADMIN' && (
                                 <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', gap: '10px' }}>
                                     <img
                                         src={DelImage}

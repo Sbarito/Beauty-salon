@@ -54,7 +54,7 @@ export default function Master() {
         if (newMasterName) {
             Masters.createMaster(newMasterName).then(response => {
                 console.log("Мастер создан:", response.data);
-                fetchMasters(); // Обновляем список мастеров после создания нового
+                fetchMasters(); 
                 resetForm();
             }).catch(error => {
                 console.error("Ошибка при создании мастера:", error);
